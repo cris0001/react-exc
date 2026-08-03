@@ -1,0 +1,131 @@
+Lista zadań na senior React livecoding, każde z rozpisanymi funkcjonalnościami.
+
+
+Tabela z danymi
+
+sortowanie po kolumnach (klik nagłówka, odwracanie kierunku, wskaźnik)
+filtrowanie tekstowe
+filtr po kategorii/statusie
+paginacja (numery stron, prev/next, blokada krańców)
+licznik wyników
+reset strony przy zmianie filtra
+
+Autocomplete / search
+
+debounce na wpisywaniu
+pobieranie wyników
+obsługa race condition
+nawigacja klawiaturą (strzałki, Enter, Escape)
+click-outside
+podświetlenie aktywnej opcji
+stany loading/empty
+
+Formularz wieloetapowy
+
+nawigacja dalej/wstecz
+wskaźnik kroku
+walidacja per krok
+blokowanie przejścia przy błędach
+stan danych ponad krokami
+podsumowanie na końcu
+submit
+
+Koszyk
+
+dodawanie produktów
+usuwanie
+zmiana ilości
+suma pozycji
+suma wartości
+opcjonalnie optimistic update z rollbackiem
+persist w localStorage
+
+Todo z filtrami
+
+dodawanie
+usuwanie
+oznaczanie ukończonego
+edycja inline (klik → input → zapis/anuluj)
+filtr (wszystkie/aktywne/ukończone)
+licznik pozostałych
+czyszczenie ukończonych
+
+Kanban
+
+kolumny i karty
+przenoszenie karty między kolumnami (drag-and-drop)
+zmiana kolejności w kolumnie
+dodawanie/usuwanie karty
+optimistic update
+
+Infinite scroll
+
+doładowywanie przy dojściu do końca (IntersectionObserver)
+stany ładowania
+brak duplikatów
+licznik załadowanych
+obsługa końca listy
+
+Drzewo komentarzy
+
+rekurencyjny render zagnieżdżeń
+dodawanie odpowiedzi
+usuwanie (z poddrzewem)
+zwijanie/rozwijanie gałęzi
+immutable update w głąb
+
+Lista z API
+
+pobieranie
+loading/error/empty states
+anulowanie stale response
+retry przy błędzie
+odświeżanie
+
+Combobox / multi-select
+
+filtrowanie opcji
+zaznaczanie wielu
+nawigacja klawiaturą
+a11y (aria-role, aria-selected)
+usuwanie zaznaczonych (chip/tag)
+click-outside
+
+Dashboard użytkowników
+
+lista
+wyszukiwarka (po imieniu/emailu, case-insensitive)
+toggle statusu per user
+licznik aktywnych
+pusty stan
+opcjonalnie sortowanie i wydajność (memo)
+
+
+
+
+
+Hooki
+
+useDebounce — opóźnienie wartości, cleanup timera
+useThrottle — ograniczenie częstości, leading/trailing
+usePrevious — poprzednia wartość przez ref
+useToggle — przełączanie boolean, set na konkretną wartość
+useLocalStorage — odczyt/zapis, lazy init, sync między kartami
+useMediaQuery — nasłuch zmiany breakpointu
+useOnClickOutside — wykrycie kliknięcia poza elementem
+useFetch — pobieranie, loading/error, anulowanie stale response
+useInterval — deklaratywny setInterval z pauzą
+useIntersectionObserver — wykrycie widoczności elementu
+
+Komponenty
+
+Modal — portal, focus trap, Escape, click-outside
+Accordion — jeden/wiele otwartych, animacja
+Tabs — przełączanie, a11y, aktywna zakładka
+Star rating — hover, klik, half-star, tylko-odczyt
+Licznik/stoper — start/stop/reset, limity min/max, krok
+Toast/notyfikacje — kolejka, auto-dismiss, ręczne zamknięcie
+Pagination — numery stron, prev/next, blokada krańców
+Dropdown menu — otwieranie, click-outside, klawiatura
+
+Bugi do naprawy (format „napraw istniejące")

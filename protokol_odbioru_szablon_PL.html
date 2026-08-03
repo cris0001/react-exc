@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protokół odbioru</title>
+    <style>
+        @page { margin: 0; size: A4; }
+        @media print { body { margin: 1cm; } }
+    </style>
+</head>
+<body style="margin: 0; padding: 0; background-color: #ffffff; font-family: DejaVu Serif, Georgia, serif; font-size: 13px; color: #000000;">
+
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+    <tr>
+        <td style="padding: 60px 80px;">
+
+            <p style="margin: 0 0 4px 0; font-size: 13px;">Miasto: {{MIASTO}}</p>
+            <p style="margin: 15px 0 20px 0; font-size: 13px;">Data dostawy - zgodnie z umową</p>
+
+            <p style="margin: 0 0 30px 0; font-size: 15px; font-weight: bold; text-align: center;">PROTOKÓŁ ODBIORU</p>
+
+            <!-- dane tabela -->
+            <table width="100%" cellspacing="0" cellpadding="0" border="1" style="border-collapse: collapse; border: 2px solid #000000; margin-bottom: 20px;">
+
+                <tr>
+                    <td width="120" style="padding: 10px 12px; border: 2px solid #000000; vertical-align: top; font-size: 13px;">
+                        Nr<br>zamówienia:
+                    </td>
+                    <td style="padding: 10px 12px; border: 2px solid #000000; vertical-align: top; font-size: 13px;">
+                        {{NR_ZAMOWIENIA}}
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style="padding: 10px 12px; border: 2px solid #000000; vertical-align: top; font-size: 13px;">
+                        Towar:
+                    </td>
+                    <td style="padding: 10px 12px; border: 2px solid #000000; vertical-align: top; font-size: 13px;">
+                        <!-- PRODUKT 1 -->
+                        {{NAZWA_PRODUKTU}}
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style="padding: 10px 12px; border: 2px solid #000000; vertical-align: top; font-size: 13px;">
+                        Adres<br>dostawy:
+                    </td>
+                    <td style="padding: 10px 12px; border: 2px solid #000000; vertical-align: top; font-size: 13px; line-height: 1.8;">
+                        Imię: <strong>{{IMIE}}</strong><br>
+                        Nazwisko: <strong>{{NAZWISKO}}</strong><br>
+                        Firma: <strong>{{FIRMA}}</strong><br>
+                        Ulica: <strong>{{ULICA}}</strong><br>
+                        Nr domu: <strong>{{NR_DOMU}}</strong><br>
+                        Nr mieszkania: <strong>{{NR_MIESZKANIA}}</strong><br>
+                        Miejscowość: <strong>{{MIEJSCOWOSC}}</strong><br>
+                        Kod pocztowy: <strong>{{KOD_POCZTOWY}}</strong><br>
+                        Telefon: <strong>{{TELEFON}}</strong>
+                    </td>
+                </tr>
+
+            </table>
+
+            <p style="margin: 50px 0 16px 0; font-size: 13px;">Uwagi do zamówienia -</p>
+
+            <p style="margin: 0 0 4px 0; font-size: 13px;">Towar opisany powyżej jest zapłacony.</p>
+            <p style="margin: 20px 0 20px 0; font-size: 13px;">POTWIERDZAM ODBIÓR ILOŚCIOWY I JAKOŚCIOWY TOWARU.</p>
+
+            <p style="margin: 0 0 30px 0; font-size: 10px; color: #333333; line-height: 1.5;">
+                Zgodnie z art. 13 Rozporządzenia Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia Dyrektywy 95/46/WE (Dz. Urz. UE L 119 z 04.05.2016) Merkury Market Spółka z ograniczoną odpowiedzialnością z siedzibą w Krośnie informuje, że:<br>
+                1) administratorem Pani/Pana danych osobowych jest Merkury Market Spółka z ograniczoną odpowiedzialnością z siedzibą w Krośnie (ul. Czajkowskiego 51, 38-400 Krosno),<br>
+                2) ma Pani/Pan prawo do kontaktu z Inspektorem Ochrony Danych Osobowych pod adresem: inspektor@merkurymarket.pl,<br>
+                3) Pani/Pana dane osobowe przetwarzane będą w celu dostawy przez przedsiębiorstwo transportowe zakupionego przez Panią/Pana towaru w oparciu o zawartą umowę sprzedaży na podstawie art. 6 ust. 1 lit. b Rozporządzenia Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia Dyrektywy 95/46/WE (Dz. Urz. UE L 119 z 04.05.2016),<br>
+                4) Pani/Pana dane osobowe przechowywane będą przez okres 6 lat od daty dostawy towaru,<br>
+                5) w związku z celem przetwarzania wskazanym powyżej, Pani/Pana dane osobowe w postaci: imienia i nazwiska, numeru telefonu i adresu zamieszkania będą przekazane przedsiębiorstwu transportowemu,<br>
+                6) posiada Pani/Pan prawo do żądania od Administratora dostępu do danych osobowych, prawo do ich sprostowania usunięcia lub ograniczenia przetwarzania, prawo do cofnięcia zgody oraz prawo do przenoszenia danych,<br>
+                7) ma Pani/Pan prawo wniesienia skargi do organu nadzorczego,<br>
+                8) podanie danych osobowych jest dobrowolne.
+            </p>
+
+            <!-- podpis -->
+            <table width="100%" cellspacing="0" cellpadding="0" border="0" style="margin-bottom: 30px;">
+                <tr>
+                    <td width="40%" style="border-top: 1px solid #000000; padding-top: 4px; font-size: 11px; font-style: italic;">
+                        Data i podpis dostawcy
+                    </td>
+                    <td width="20%"></td>
+                    <td width="40%" style="border-top: 1px solid #000000; padding-top: 4px; font-size: 11px; font-style: italic;">
+                        Data i podpis odbierającego (klienta)
+                    </td>
+                </tr>
+            </table>
+
+            <!-- qr -->
+            <p style="margin: 0 0 10px 0; font-size: 14px;">Potwierdzenie dostawy do klienta (zeskanuj kod QR)</p>
+            <img src="{{QR_URL}}" alt="Kod QR" width="130" height="130" style="display: block; border: 0;">
+
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>

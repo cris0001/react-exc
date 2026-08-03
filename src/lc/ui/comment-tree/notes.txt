@@ -1,0 +1,17 @@
+
+Rekurencja w renderze: komponent renderuje sam siebie; depth płynie w dół przez props (depth+1), nie trzymasz w danych
+
+Immutable update drzewa: addReply/removeComment zwracają nowe drzewo — map+{...node} w głąb, filter do usuwania; nigdy mutacja
+
+Czemu immutable: React porównuje referencję (Object.is) → mutacja = brak re-renderu; tak samo tablica [...], obiekt {...}, new Set(prev)
+
+Stan referencyjny: update = kopia → zmiana → return, przez updater prev=> (nie z domknięcia)
+
+Lifting state up: stan współdzielony u wspólnego przodka; węzeł tylko czyta props i woła handlery
+
+collectIds — rekurencja zbierająca: [id, ...replies.flatMap(collectIds)]; liść = przypadek bazowy za darmo
+
+Set na expandedIds: trzyma tylko kliknięte id; kaskada zwijania działa sama (render się urywa, nie ruszasz dzieci)
+
+Testy: logikę → czyste funkcje jednostkowo (w tym test immutability: oryginał nietknięty); UI → tylko kluczowe ścieżki przez zachowanie
+toEqual([...]) > toHaveLength: sprawdza zawartość, długość i kolejność naraz

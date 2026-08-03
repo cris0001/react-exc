@@ -1,0 +1,30 @@
+Implementacje wbudowanych mechanizmów:
+
+debounce / throttle ✅ (masz)
+własny map / filter / reduce
+Promise.all / Promise.race od zera
+memoize (cache wyników — closure + Map)
+curry uniwersalny (zamienia dowolną wieloargumentową w curried)
+event emitter (on/off/emit — pub-sub)
+
+Async / współbieżność:
+
+kolejność wykonania (async/await + then + setTimeout wymieszane)
+ograniczenie współbieżności (promise pool — max N naraz)
+retry z backoff
+sekwencyjne vs równoległe wykonanie tasków
+sleep(ms) (promisyfikacja setTimeout)
+
+Transformacje / struktury danych:
+
+flatten zagnieżdżonej tablicy
+deep clone obiektu
+deep equal (porównanie głębokie)
+grupowanie / agregacja
+płaska lista z parentId → drzewo
+
+Zamknięcia / this / mechanika:
+
+stale closure (bug w setTimeout w pętli — napraw)
+this w różnych kontekstach (arrow vs zwykła, metoda vs wyrwana)
+hoisting, TDZ (var vs let)
