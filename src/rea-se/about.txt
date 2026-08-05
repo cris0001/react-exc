@@ -106,16 +106,16 @@ opcjonalnie sortowanie i wydajność (memo)
 
 Hooki
 
-useDebounce — opóźnienie wartości, cleanup timera
-useThrottle — ograniczenie częstości, leading/trailing
-usePrevious — poprzednia wartość przez ref
-useToggle — przełączanie boolean, set na konkretną wartość
-useLocalStorage — odczyt/zapis, lazy init, sync między kartami
-useMediaQuery — nasłuch zmiany breakpointu
-useOnClickOutside — wykrycie kliknięcia poza elementem
-useFetch — pobieranie, loading/error, anulowanie stale response
-useInterval — deklaratywny setInterval z pauzą
-useIntersectionObserver — wykrycie widoczności elementu
+useDebounce —
+useThrottle —
+usePrevious —
+useToggle —
+useLocalStorage —
+useMediaQuery —
+useOnClickOutside —
+useFetch —
+useInterval —
+useIntersectionObserver —
 
 Komponenty
 

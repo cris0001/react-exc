@@ -1,35 +1,36 @@
 import {useCallback, useEffect, useRef, useState} from "react";
 
-export function useDebounce<T >(value:T, delay:number){
+function useDebounce<T>(value:T,delay:number){
 
-const [debounced, setDebounced] = useState(value)
-
+    const [debounced, setDebounced]= useState(value)
 
     useEffect(() => {
 
-        const timeout = setTimeout(()=>{
-            setDebounced(value)
-        },delay)
-
-
-
+        const timeout = setTimeout(()=> setDebounced(value),delay)
         return ()=> clearTimeout(timeout)
 
-    }, [value, delay]);
+    }, [value,delay]);
 
     return debounced
-
 }
 
-function useDebounceFn<T extends (...args: any[]) => void>(fn: T, ms: number): T {
 
-    const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+function useDebounceFb<T extends (...args:any[])=> void>(fn:T, delay:number){
+
+
     const fnRef = useRef(fn)
+    const timeoutRef = useRef<ReturnType<typeof setTimeout>| undefined>(undefined)
 
-    useEffect(() => { fnRef.current = fn }, [fn])
+    useEffect(() => {
+        fnRef.current=fn
+    }, [fn]);
 
-    return useCallback((...args: Parameters<T>) => {
-        if (timerRef.current) clearTimeout(timerRef.current)
-        timerRef.current = setTimeout(() => fnRef.current(...args), ms)
-    }, [ms]) as T
+    return useCallback((...args:Parameters<T>) => {
+        clearTimeout(timeoutRef.current)
+        timeoutRef.current = setTimeout(() => fnRef.current(...args), delay)  // woła REF
+    }, [delay])
+
+
+
+
 }
