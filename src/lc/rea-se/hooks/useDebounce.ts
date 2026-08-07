@@ -15,7 +15,7 @@ function useDebounce<T>(value:T,delay:number){
 }
 
 
-function useDebounceFb<T extends (...args:any[])=> void>(fn:T, delay:number){
+export function useDebounceFn<T extends (...args:any[])=> void>(fn:T, delay:number){
 
 
     const fnRef = useRef(fn)

@@ -1,4 +1,3 @@
-Lista zadań na senior React livecoding, każde z rozpisanymi funkcjonalnościami.
 
 
 Tabela z danymi
