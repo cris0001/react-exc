@@ -1,15 +1,10 @@
 function promiseAll<T>(promises:(T |  Promise<T>)[]): Promise<T[]> {
 
-
-
-
-
     return new Promise<T[]>((resolve, reject) => {
         if (promises.length === 0) {
             resolve([])
             return
         }
-
         const results: T[] = []
         let completed = 0
 
@@ -27,5 +22,25 @@ function promiseAll<T>(promises:(T |  Promise<T>)[]): Promise<T[]> {
         })
 
 
+    })
+}
+
+
+
+function promiseAll2<T>( promises: Promise<T>[]): Promise<T[]>{
+
+
+    return new Promise((resolve, reject)=>{
+        if (promises.length === 0) {
+            resolve([])
+            return
+        }
+        let completed= 0
+        const results: T[] =[]
+promises.forEach((promise,i)=>{
+    promise.then((res)=>{
+        results[i] = res
+    }).catch(reject)
+})
     })
 }
