@@ -26,8 +26,6 @@ SHOULD — warto mieć
 Tablice — iteracja:
 
 js
-arr.map(x => x * 2)
-arr.filter(x => x > 5)
 arr.reduce((acc, x) => acc + x, 0)
 arr.forEach(x => ...)
 arr.find(x => x === 5)             // element
