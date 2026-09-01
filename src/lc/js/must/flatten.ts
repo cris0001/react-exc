@@ -13,3 +13,4 @@ function flatten<T>(arr: NestedArray<T>): T[] {
 
     return result
 }
+

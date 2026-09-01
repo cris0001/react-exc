@@ -6,6 +6,7 @@ export function useFetch(query:string){
     const [data, setData] = useState<Array<string>>([])
     const [loading, setLoading] =useState(false)
     const [error, setError] = useState('')
+    const [fetchedQuery, setFetchedQuery] = useState('')
 
     useEffect(() => {
 
@@ -32,6 +33,7 @@ export function useFetch(query:string){
             }finally {
                 if (!ignore) {
                     setLoading(false)
+                    setFetchedQuery(query)
                 }
             }
         }
@@ -41,5 +43,5 @@ export function useFetch(query:string){
     }, [query]);
 
 
-    return {data, loading, error }
+    return {data, loading, error, fetchedQuery }
 }
